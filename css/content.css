@@ -108,7 +108,8 @@ input[type="password"]::placeholder {
   background: url(../img/promo_image.jpg);
 }
 
-.about_main {
+.about_main,
+.book_main {
   margin: 100px 30px 0px 30px;
 }
 
@@ -122,14 +123,16 @@ input[type="password"]::placeholder {
 
 .about_main .head .title,
 .about_main .history .title_history,
-.about_main .contacts .title {
+.contacts .title,
+.book_main .title {
   display: flex;
   font-family: "SF Pro Display Light";
   font-size: 60px;
   letter-spacing: -1.5px;
 }
 
-.about_main .head .line {
+.about_main .head .line,
+.book_main .title .line {
   margin: 0px 10px;
 }
 
@@ -188,20 +191,20 @@ input[type="password"]::placeholder {
   height: 320px;
 }
 
-.about_main .contacts {
+.contacts {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
 }
 
-.about_main .contact_block {
+.contact_block {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 40%;
 }
 
-.about_main .contact_info {
+.contact_info {
   font-family: "SF Pro Display Light";
   font-size: 22px;
   letter-spacing: -1px;
@@ -218,11 +221,11 @@ input[type="password"]::placeholder {
   font-size: 22px;
 }
 
-.about_main .contact_image {
+.contact_image {
   width: 90%;
 }
 
-.about_main .contact_image img {
+.contact_image img {
   width: 95%;
   margin-left: 50px;
 }
@@ -242,4 +245,8 @@ footer .navigation {
 
 footer .rights {
   opacity: 0.4;
+}
+
+.book_main .title {
+  margin-bottom: 50px;
 }
