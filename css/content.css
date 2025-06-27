@@ -58,7 +58,8 @@ footer nav ul li {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="tel"] {
   width: 100%;
   border: none;
   border-bottom: 1.5px solid #191919;
@@ -71,7 +72,8 @@ input[type="password"] {
 }
 
 input[type="text"]::placeholder,
-input[type="password"]::placeholder {
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder {
   color: #191919;
   font-size: 25px;
 }
@@ -112,7 +114,8 @@ input[type="password"]::placeholder {
 .poster_main,
 .good_main,
 .catalog_main,
-.hero_main {
+.hero_main,
+.cart_main {
   margin: 100px 30px 0px 30px;
 }
 
@@ -132,7 +135,8 @@ input[type="password"]::placeholder {
 .space_main .gate_info .title,
 .poster_main .title,
 .catalog_main .title,
-.hero_main .title {
+.hero_main .title,
+.cart_main .title {
   display: flex;
   font-family: "SF Pro Display Light";
   font-size: 60px;
@@ -150,7 +154,8 @@ input[type="password"]::placeholder {
 .space_main .gate_info .text,
 .space_main .temple_info .text,
 .poster_main .text_about,
-.hero_about .text_about {
+.hero_about .text_about,
+.cart_main .good {
   font-family: "SF Pro Display Light";
   font-size: 22px;
   letter-spacing: -1px;
@@ -699,6 +704,17 @@ footer .rights {
   width: 100%;
 }
 
+.hero_about .button_more:hover,
+.hero_space .description_block .button_more:hover {
+  background-color: #bdbdbd;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.hero_about .button_more:hover a,
+.hero_space .description_block .button_more:hover a {
+  color: #2a2a2a;
+}
+
 .hero_posters {
   margin-top: 70px;
 }
@@ -782,6 +798,198 @@ footer .rights {
 }
 
 .hero_merch .button a {
+  text-decoration: none;
+  color: #191919;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .content_block {
+  background-color: #fafafa;
+  animation: modalopen 0.3s;
+  margin: 20% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.modal .headline {
+  font-family: "SF Pro Display Light";
+  font-size: 45px;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subhead_animation {
+  animation: fade_slide 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+@keyframes fade_slide {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header_main .hero_title h1 {
+  letter-spacing: -2px;
+  line-height: 0.85;
+}
+
+.hero_animation {
+  background: linear-gradient(90deg, #fafafa, #ececec);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: time_pulse_head 4s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes time_pulse_head {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.99);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.header_main .logo a,
+.header_main nav ul li a {
+  animation: fade_slide 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+  transition: all 0.1s ease;
+}
+
+.header_main .logo a:hover,
+.header_main nav ul li a:hover {
+  color: #b9b9b9;
+  animation-delay: 1s;
+  transition: all 0.6s ease;
+}
+
+.glitch {
+  position: relative;
+  animation: glitch-effect 2s infinite;
+}
+
+.glitch::before {
+  text-shadow: 2px 0 #434343;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-anim 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-effect {
+  0%,
+  100% {
+    text-shadow: 1.5px 0 #d9d9d9, -1.5px 0 #828282;
+  }
+  25% {
+    text-shadow: -1.5px 0 #d9d9d9, 1.5px 0 #828282;
+  }
+}
+
+.cart_main {
+  margin-top: 120px;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart .cart_block {
+  width: 65%;
+}
+
+.cart .cart_block .title {
+  margin-bottom: 80px;
+}
+
+.cart_main .good {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_main .good {
+  margin: 20px 0;
+}
+
+.cart .check_block {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cart .line_block {
+  width: 3%;
+}
+
+.cart .count_info,
+.cart .count_sum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart .check_block {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+
+.cart .button_buy {
+  margin-top: 50px;
+  border: 2px solid #191919;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .button_buy a {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  margin: 5px 0 10px 0;
   text-decoration: none;
   color: #191919;
 }

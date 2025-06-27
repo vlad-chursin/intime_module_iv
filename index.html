@@ -14,15 +14,15 @@
         <nav>
           <ul>
             <li><a href="auth.html">[войти]</a></li>
-            <li><a href="">[корзина]</a></li>
+            <li><a href="cart.html">[корзина]</a></li>
             <li><a href="">[меню]</a></li>
           </ul>
         </nav>
       </div>
       <div class="hero_middle">
-        <p class="subheading">Забудь про [рамки]</p>
-        <div class="hero_title">
-          <h1>УПРАВЛЯЙ<br />ВРЕМЕНЕМ С НАМИ</h1>
+        <p class="subheading subhead_animation">Забудь про [рамки]</p>
+        <div class="hero_title hero_animation">
+          <h1>УПРАВЛЯЕМ<br />ВРЕМЕНЕМ С ВАМИ</h1>
           <span class="ref">[1]</span>
         </div>
       </div>
@@ -30,7 +30,7 @@
     <main class="hero_main">
       <section class="hero_about">
         <div class="info_block">
-          <div class="title">
+          <div class="title glitch">
             <p>О Компании</p>
             <img src="./img/hero_about_line.svg" alt="line" class="line" />
             <p>Ин[Тайм]</p>
@@ -261,6 +261,26 @@
           <img src="./img/contact_image.jpg" alt="image" />
         </div>
       </section>
+
+      <div id="form_modal" class="modal">
+        <div class="content_block">
+          <div class="form_block">
+            <p class="headline">Оставить Заявку</p>
+            <div class="inputs">
+              <input type="text" name="name" placeholder="Имя" />
+              <input
+                type="tel"
+                name="phone_number"
+                placeholder="Номер Телефона"
+              />
+            </div>
+            <div class="button_submit">
+              <button type="submit">Отправить</button>
+            </div>
+          </div>
+          <div class="image_block"></div>
+        </div>
+      </div>
     </main>
     <footer>
       <img src="./img/footer_line.svg" alt="line" width="96%" class="line" />
@@ -277,5 +297,7 @@
         </nav>
       </div>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
