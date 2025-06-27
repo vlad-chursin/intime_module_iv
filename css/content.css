@@ -77,7 +77,8 @@ input[type="password"]::placeholder {
 }
 
 .auth_main .form .button_auth,
-.contact_block .button_contact {
+.contact_block .button_contact,
+.good_info .button_contact {
   border: 1.5px solid #191919;
   height: 50px;
   display: flex;
@@ -86,7 +87,8 @@ input[type="password"]::placeholder {
 }
 
 .auth_main .form .button_auth a,
-.contact_block .button_contact a {
+.contact_block .button_contact a,
+.good_info .button_contact a {
   font-family: SF Pro Display Light;
   font-size: 30px;
   text-decoration: none;
@@ -104,12 +106,13 @@ input[type="password"]::placeholder {
   width: 100%;
 }
 
-.back_header {
-  background: url(../img/promo_image.jpg);
-}
-
 .about_main,
-.book_main {
+.book_main,
+.space_main,
+.poster_main,
+.good_main,
+.catalog_main,
+.hero_main {
   margin: 100px 30px 0px 30px;
 }
 
@@ -124,7 +127,12 @@ input[type="password"]::placeholder {
 .about_main .head .title,
 .about_main .history .title_history,
 .contacts .title,
-.book_main .title {
+.book_main .title,
+.space_main .title,
+.space_main .gate_info .title,
+.poster_main .title,
+.catalog_main .title,
+.hero_main .title {
   display: flex;
   font-family: "SF Pro Display Light";
   font-size: 60px;
@@ -132,11 +140,17 @@ input[type="password"]::placeholder {
 }
 
 .about_main .head .line,
-.book_main .title .line {
+.book_main .title .line,
+.hero_main .title .line {
   margin: 0px 10px;
 }
 
-.about_main .text_about {
+.about_main .text_about,
+.space_main .text_about,
+.space_main .gate_info .text,
+.space_main .temple_info .text,
+.poster_main .text_about,
+.hero_about .text_about {
   font-family: "SF Pro Display Light";
   font-size: 22px;
   letter-spacing: -1px;
@@ -176,18 +190,21 @@ input[type="password"]::placeholder {
   line-height: 1.3;
 }
 
-.about_main .history_images {
+.about_main .history_images,
+.hero_main .history_images {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 }
 
-.about_main .history_images .history_image {
+.about_main .history_images .history_image,
+.hero_main .history_images .history_image {
   width: 32%;
   height: 60%;
 }
 
-.about_main .history_images .line_image {
+.about_main .history_images .line_image,
+.hero_main .history_images .line_image {
   height: 320px;
 }
 
@@ -234,6 +251,10 @@ footer .line {
   margin: 60px 30px 0 30px;
 }
 
+.hero_merch .line {
+  margin-top: 90px;
+}
+
 footer .navigation {
   display: flex;
   justify-content: space-between;
@@ -249,4 +270,518 @@ footer .rights {
 
 .book_main .title {
   margin-bottom: 50px;
+}
+
+.space_main .title .line {
+  margin: 0 18px;
+}
+
+.space_main .about_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space_main .about_block .text_about {
+  width: 35%;
+}
+
+.space_main .image_space {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.space_main .image_space .img_1 {
+  width: 66%;
+}
+
+.space_main .image_space .img_2 {
+  width: 33%;
+}
+
+.space_main .gate_block {
+  margin-top: 70px;
+}
+
+.space_main .gate_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.space_main .gate_info .title {
+  margin-top: 0px;
+}
+
+.space_main .gate_info .text {
+  width: 60%;
+  margin-top: 10px;
+}
+
+.space_main .temple_block {
+  margin-top: 70px;
+}
+
+.space_main .temple_info .text {
+  width: 53%;
+}
+
+.space_main .temple_image {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.space_main .temple_image .img_1 {
+  width: 50%;
+}
+
+.space_main .temple_image .img_2 {
+  width: 49%;
+  height: 25%;
+}
+
+.poster_main .about_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.poster_main .title .line {
+  margin-left: 6px;
+}
+
+.poster_main .text_about {
+  width: 30%;
+}
+
+.poster_main .line_opacity {
+  opacity: 0;
+}
+
+.poster_main .line_down {
+  margin: 5px 0px 5px 45px;
+}
+
+.poster_main .typography_posters {
+  margin-top: 10px;
+}
+
+.poster_main .typography_posters .title {
+  margin-left: 530px;
+}
+
+.poster_main .typography_posters .posters {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.poster_main .typography_posters .poster .poster_img,
+.poster_main .typography_posters .poster_2 .poster_img {
+  width: 80%;
+}
+
+.poster_main .typography_posters .poster .subtitle,
+.poster_main .typography_posters .poster_2 .subtitle,
+.poster_main .graphic_posters .poster .subtitle,
+.hero_posters .posters .poster .subtitle {
+  font-family: SF Pro Display Light;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+.poster_main .typography_posters .poster_line {
+  display: flex;
+  margin-left: 90px;
+}
+
+.poster_main .typography_posters .poster_2 {
+  margin-left: -70px;
+}
+
+.poster_main .graphic_posters .poster_line_down {
+  margin-top: 10px;
+}
+
+.poster_main .graphic_posters .posters {
+  display: flex;
+  margin-left: 350px;
+  margin-top: 30px;
+}
+
+.poster_main .graphic_posters .poster {
+  margin-right: 10px;
+}
+
+.poster_main .graphic_posters .poster .poster_img {
+  width: 100%;
+}
+
+.good_main {
+  margin-top: 50px;
+}
+
+.good_main .nav {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+
+.good_main .nav a {
+  text-decoration: none;
+  color: #191919;
+  cursor: pointer;
+}
+
+.good_main .good_gallery {
+  width: 60%;
+}
+
+.good_main .good_gallery .main_image {
+  width: 90%;
+}
+
+.good_main .gallery {
+  display: flex;
+}
+
+.good_main .good_gallery .image {
+  width: 16.85%;
+  border: 1px solid #191919;
+  margin-right: 10px;
+}
+
+.good_main .good_card {
+  display: flex;
+  margin-top: 20px;
+}
+
+.good_main .good_info {
+  width: 40%;
+}
+
+.good_main .good_info .title,
+.good_main .good_info .price {
+  font-family: "SF Pro Display Light";
+  font-size: 60px;
+  letter-spacing: -1.5px;
+}
+
+.good_main .good_info .description,
+.hero_merch .products .good_card p {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  margin-top: 25px;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.hero_merch .products .good_card p {
+  margin: 5px 0px 15px 0px;
+}
+
+.good_main .good_info .price {
+  font-size: 50px;
+}
+
+.good_main .good_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.good_info .button_contact {
+  margin-top: 35px;
+  height: 45px;
+}
+
+.good_info .button_contact a {
+  font-size: 25px;
+}
+
+.catalog_main .catalog {
+  margin-top: 80px;
+  display: flex;
+}
+
+.catalog_main aside {
+  width: 15%;
+  border-right: 2px solid #191919;
+  margin-top: 20px;
+}
+
+.catalog_main aside p {
+  font-family: "SF Pro Display Regular";
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+
+.catalog_main aside li {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+
+.catalog_main .goods {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog_main .goods .goods_line,
+.hero_merch .products .goods_line {
+  display: flex;
+  justify-content: space-between;
+  text-wrap: nowrap;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+.hero_merch .products .goods_line {
+  margin-top: 80px;
+}
+
+.catalog_main .goods .good_card,
+.hero_merch .products .good_card {
+  width: 100%;
+}
+
+.catalog_main .goods .good_card .good_image,
+.hero_merch .products .good_card .good_image {
+  width: 100%;
+}
+
+.catalog_main .goods .good_card .name,
+.catalog_main .goods .good_card .button_buy a,
+.hero_merch .products .good_card .button_buy a {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  margin: 5px 0 10px 0;
+  text-decoration: none;
+  color: #191919;
+}
+
+.catalog_main .goods .good_card .button_buy,
+.hero_merch .products .good_card .button_buy {
+  border: 2px solid #191919;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header_main {
+  background: url(../img/promo_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #f6f6f6;
+}
+
+.header_main .head_block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.header_main .head_block .logo {
+  margin-left: 30px;
+}
+
+.header_main a {
+  color: #f6f6f6;
+}
+
+.header_main .hero_middle {
+  margin: 0 0 50px 30px;
+}
+
+.header_main .hero_middle .hero_title {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_main .hero_middle h1 {
+  font-size: 155px;
+  line-height: 0.8;
+}
+
+.header_main .hero_middle .ref {
+  font-size: 40px;
+  margin-top: 100px;
+}
+
+.header_main .hero_middle .subheading {
+  font-family: "SF Pro Display Light";
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.hero_main .description {
+  display: flex;
+}
+
+.hero_main .description .text_block {
+  margin-left: 600px;
+}
+
+.hero_main .text_block .button_more a,
+.hero_space .description_block .button_more a,
+.hero_posters .button_more a {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  margin: 5px 0 10px 0;
+  text-decoration: none;
+  color: #191919;
+}
+
+.hero_main .text_block .button_more,
+.hero_space .description_block .button_more,
+.hero_posters .button_more {
+  margin-top: 50px;
+  border: 2px solid #191919;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+.hero_space {
+  margin-top: 100px;
+}
+
+.hero_space .about_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero_space .about_block .image {
+  width: 65%;
+}
+
+.hero_space .about_block .line_description {
+  margin: 0 30px;
+}
+
+.hero_space .about_block {
+  margin-top: 30px;
+}
+
+.hero_space .about_block .text_about {
+  font-family: "SF Pro Display Light";
+  font-size: 22px;
+  letter-spacing: -1px;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.hero_space .description_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero_space .description_block .button_more {
+  width: 100%;
+}
+
+.hero_posters {
+  margin-top: 70px;
+}
+
+.hero_posters .title .line {
+  margin-left: 43px;
+}
+
+.hero_posters .posters {
+  display: flex;
+  margin-top: 50px;
+}
+
+.hero_posters .posters .poster .poster_img {
+  width: 95%;
+}
+
+.hero_posters .button_more {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.hero_calendar {
+  margin-top: 70px;
+}
+
+.hero_calendar .month {
+  font-family: "SF Pro Display Light";
+  font-size: 35px;
+  letter-spacing: -1px;
+  margin-top: 15px;
+}
+
+.hero_calendar .cards {
+  margin-top: 40px;
+}
+
+.hero_calendar .card_line {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hero_calendar .card img {
+  width: 99%;
+}
+
+.hero_calendar .card .date,
+.hero_calendar .card .subtitle {
+  font-family: "SF Pro Display Regular";
+  font-size: 22px;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+
+.hero_calendar .card .subtitle {
+  font-family: "SF Pro Display Light";
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.hero_merch {
+  margin-top: 80px;
+}
+
+.hero_calendar .head_block,
+.hero_merch .head_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero_calendar .button,
+.hero_merch .button {
+  display: flex;
+}
+
+.hero_calendar .button img,
+.hero_merch .button img {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.hero_merch .button a {
+  text-decoration: none;
+  color: #191919;
 }
