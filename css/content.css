@@ -890,11 +890,20 @@ footer .rights {
 }
 
 .header_main .logo a,
-.header_main nav ul li a {
+.header_main nav ul li a,
+.header_page_animate .logo a,
+.header_page_animate nav ul li a {
   animation: fade_slide 1s ease-out forwards;
   opacity: 0;
   animation-delay: 0.3s;
   transition: all 0.1s ease;
+}
+
+.header_page .logo a:hover,
+.header_page nav ul li a:hover {
+  color: #888888;
+  animation-delay: 1s;
+  transition: all 0.6s ease;
 }
 
 .header_main .logo a:hover,
