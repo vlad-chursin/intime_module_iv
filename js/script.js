@@ -1,3 +1,19 @@
+document.body.style.opacity = "0";
+document.body.style.transition = "opacity 0.5s ease";
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = "1";
+});
+
+window.addEventListener("load", () => {
+  clearInterval(interval);
+  progressBar.style.width = "100%";
+  setTimeout(() => {
+    progressBar.style.opacity = "0";
+    document.body.style.overflow = "auto";
+  }, 500);
+});
+
 const modal = document.getElementById("form_modal");
 const btn = document.getElementById("open_modal");
 const span = document.getElementsByClassName("close")[0];
