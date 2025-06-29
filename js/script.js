@@ -5,15 +5,6 @@ window.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = "1";
 });
 
-window.addEventListener("load", () => {
-  clearInterval(interval);
-  progressBar.style.width = "100%";
-  setTimeout(() => {
-    progressBar.style.opacity = "0";
-    document.body.style.overflow = "auto";
-  }, 500);
-});
-
 const modal = document.getElementById("form_modal");
 const btn = document.getElementById("open_modal");
 const span = document.getElementsByClassName("close")[0];
@@ -102,5 +93,82 @@ document.querySelectorAll(".card_calendar").forEach((card) => {
 
   card.addEventListener("mouseleave", () => {
     card.style.transform = "";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu");
+  const fullscreenMenu = document.getElementById("fullscreenMenu");
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  // Объявляем все необходимые переменные
+  let animationFrameId;
+  let closeTimer;
+  let isMenuOpen = false;
+
+  // Функция анимации ссылок
+  const animateLinks = () => {
+    menuLinks.forEach((link, index) => {
+      link.style.opacity = "0";
+      link.style.transform = "translateY(20px)";
+      link.style.transition = `all 0.5s ease ${index * 0.1}s`;
+
+      animationFrameId = requestAnimationFrame(() => {
+        link.style.opacity = "1";
+        link.style.transform = "translateY(0)";
+      });
+    });
+  };
+
+  // Функция сброса анимации
+  const resetLinksAnimation = () => {
+    menuLinks.forEach((link) => {
+      link.style.opacity = "0";
+      link.style.transform = "translateY(20px)";
+    });
+  };
+
+  // Обработчик клика по кнопке меню
+  const toggleMenu = () => {
+    isMenuOpen = !isMenuOpen;
+    menuToggle.classList.toggle("active", isMenuOpen);
+    fullscreenMenu.classList.toggle("active", isMenuOpen);
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+
+    if (isMenuOpen) {
+      animateLinks();
+    } else {
+      resetLinksAnimation();
+    }
+  };
+
+  // Обработчик клика по ссылке
+  const handleLinkClick = function (e) {
+    e.preventDefault();
+    const targetUrl = this.getAttribute("href");
+
+    if (closeTimer) clearTimeout(closeTimer);
+
+    isMenuOpen = false;
+    menuToggle.classList.remove("active");
+    fullscreenMenu.classList.remove("active");
+    document.body.style.overflow = "auto";
+    resetLinksAnimation();
+
+    closeTimer = setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 500);
+  };
+
+  // Назначение обработчиков событий
+  menuToggle.addEventListener("click", toggleMenu);
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", handleLinkClick);
+  });
+
+  // Очистка при уходе со страницы
+  window.addEventListener("beforeunload", () => {
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+    if (closeTimer) clearTimeout(closeTimer);
   });
 });
