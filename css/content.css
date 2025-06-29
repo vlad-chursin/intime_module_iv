@@ -638,7 +638,7 @@ footer .rights {
 }
 
 .hero_main .description .text_block {
-  margin-left: 600px;
+  margin-left: 580px;
 }
 
 .hero_main .text_block .button_more a,
@@ -1001,4 +1001,26 @@ footer .rights {
   margin: 5px 0 10px 0;
   text-decoration: none;
   color: #191919;
+}
+
+.smooth_blink_image {
+  animation: smoothBlink 1.5s infinite ease-in-out;
+  opacity: 0.2;
+  margin: 0px 10px;
+}
+
+@keyframes smoothBlink {
+  0%,
+  100% {
+    opacity: 0.2;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+
+.blink-image {
+  transition: opacity 1s ease-in-out;
 }
