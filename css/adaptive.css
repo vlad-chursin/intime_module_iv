@@ -325,3 +325,260 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 425px) {
+  body {
+    padding: 0px;
+  }
+
+  .hero_main .title {
+    justify-content: space-between;
+  }
+
+  .hero_main .title p {
+    font-size: 35px;
+  }
+
+  .hero_main .info_block img,
+  .header_main .description img {
+    display: none;
+  }
+
+  .hero_main .description .text_block {
+    margin-left: 0px;
+  }
+
+  .hero_about .text_about {
+    width: 100%;
+  }
+
+  .hero_main .text_about p {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .hero_main .text_block .button_more {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .hero_main .history_images .line_image {
+    display: none;
+  }
+
+  .hero_main .history_images .history_image {
+    width: 100%;
+  }
+
+  .hero_space,
+  .hero_posters,
+  .hero_calendar,
+  .hero_merch {
+    margin-top: 50px;
+  }
+
+  .hero_space .title {
+    line-height: 0.9;
+  }
+
+  .hero_main .title .line {
+    display: none;
+  }
+
+  .hero_main .about_block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero_space .about_block .line_description {
+    display: none;
+  }
+
+  .hero_space .description_block .button_more {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+
+  .hero_space .about_block .image {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .hero_posters .posters {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero_posters .posters .poster {
+    width: 48.5%;
+  }
+
+  .hero_posters .button_more {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+  .hero_calendar .head_block {
+    flex-direction: column;
+  }
+
+  .hero_calendar .title {
+    align-items: center;
+  }
+
+  .hero_calendar .title p,
+  .hero_calendar .title .calendar,
+  .hero_calendar .button .title,
+  .hero_merch .head_block .button .title,
+  .hero_merch .head_block .title p {
+    font-size: 37px !important;
+  }
+
+  .hero_calendar .button img,
+  .hero_merch .button img {
+    width: 3%;
+  }
+
+  .hero_calendar .cards {
+    margin-top: 20px;
+  }
+
+  .hero_calendar .card_line {
+    flex-wrap: wrap;
+  }
+
+  .hero_calendar .card_line .card {
+    width: 47%;
+  }
+
+  .hero_calendar .card .subtitle {
+    line-height: 0.8;
+  }
+
+  .hero_merch .goods_line {
+    flex-wrap: wrap;
+  }
+
+  .hero_merch .products .good_card {
+    width: 46%;
+  }
+
+  .hero_merch .products .good_card .button_buy {
+    max-height: 30px;
+    width: 99%;
+    border: 1px solid #191919;
+  }
+
+  .hero_merch .products .good_card .button_buy a {
+    margin: 0px;
+  }
+
+  .hero_merch .products .goods_line {
+    margin-top: 30px;
+  }
+
+  .hero_merch .head_block {
+    flex-direction: column;
+  }
+
+  .hero_merch .head_block .title .calendar,
+  .hero_merch .head_block .button .title {
+    line-height: 0.9;
+    font-size: 33px !important;
+    margin-top: 10px;
+  }
+
+  .hero_merch .button img {
+    width: 4%;
+    margin-bottom: 5px;
+  }
+
+  .hero_merch .line {
+    display: none;
+  }
+
+  .contacts {
+    margin-top: 30px;
+  }
+
+  .hero_main .title {
+    font-size: 37px;
+  }
+
+  .contact_block .button_contact {
+    margin-left: 0px;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+  }
+
+  .contact_block .button_contact a {
+    margin: 0px;
+  }
+
+  footer .line {
+    display: none;
+  }
+
+  footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header_main .head_block {
+    align-items: center;
+    margin: 30px 20px;
+  }
+
+  .header_main .head_block .logo {
+    margin-left: 20px;
+  }
+
+  .header_main .hero_middle {
+    margin: 0px;
+  }
+
+  .header_main .hero_middle .hero_title {
+    width: 100%;
+  }
+
+  .header_main .hero_middle h1 {
+    font-size: 70px;
+    margin: 0px 10px;
+  }
+
+  .header_main .hero_middle .subheading {
+    margin-bottom: 5px;
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .header_main .hero_middle .ref {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .header_main .head_block .logo {
+    margin-left: 0px;
+  }
+
+  .menu-list {
+    padding: 0;
+    margin: 0px 0px 10px 10px;
+  }
+
+  .menu-link {
+    font-family: SF Pro Display Regular;
+    font-size: 30px;
+    color: #191919;
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+
+  .header_main .hero_middle .ref {
+    display: none;
+  }
+}
