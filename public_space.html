@@ -134,13 +134,41 @@
             </p>
           </div>
           <div class="button_contact smooth_blink_image">
-            <a href="">Оставить заявку</a>
+            <a id="open_modal">Оставить заявку</a>
           </div>
         </div>
         <div class="contact_image">
           <img src="./img/contact_image.jpg" alt="image" class="float_img" />
         </div>
       </section>
+
+      <div id="form_modal" class="modal">
+        <div class="content_block">
+          <div class="form_block">
+            <div class="form">
+              <p class="headline">Оставить Заявку</p>
+              <div class="inputs">
+                <input type="text" name="name" placeholder="Имя" />
+                <input
+                  type="tel"
+                  name="phone_number"
+                  placeholder="Номер Телефона"
+                />
+              </div>
+            </div>
+            <div class="button_submit">
+              <button type="submit">Отправить</button>
+            </div>
+          </div>
+          <div class="image_block">
+            <img
+              src="./img/contact_image.jpg"
+              alt="image"
+              class="modal_image"
+            />
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <img

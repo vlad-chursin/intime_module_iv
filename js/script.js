@@ -5,29 +5,45 @@ window.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = "1";
 });
 
-const modal = document.getElementById("form_modal");
-const btn = document.getElementById("open_modal");
-const span = document.getElementsByClassName("close")[0];
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("form_modal");
+  const openBtn = document.getElementById("open_modal");
+  const closeBtn = document.querySelector(".close");
 
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// };
+  const openModal = () => {
+    if (!modal) return;
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+    modal.setAttribute("aria-hidden", "false");
+  };
 
-// span.onclick = function () {
-//   modal.style.display = "none";
-// };
-
-window.onclick = function (event) {
-  if (event.target == modal) {
+  const closeModal = () => {
+    if (!modal) return;
     modal.style.display = "none";
-  }
-};
+    document.body.style.overflow = "";
+    modal.setAttribute("aria-hidden", "true");
+  };
 
-// document.addEventListener("keydown", function (event) {
-//   if (event.key === "Escape" && modal.style.display === "block") {
-//     modal.style.display = "none";
-//   }
-// });
+  if (openBtn) {
+    openBtn.addEventListener("click", openModal);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
+  }
+
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal?.style.display === "block") {
+      closeModal();
+    }
+  });
+});
 
 document.body.style.overflow = "hidden";
 document.body.style.overflow = "auto";
