@@ -192,7 +192,8 @@ input[type="tel"]::placeholder {
 .good_main,
 .catalog_main,
 .hero_main,
-.cart_main {
+.cart_main,
+.error_main {
   margin: 100px 30px 0px 30px;
 }
 
@@ -213,7 +214,8 @@ input[type="tel"]::placeholder {
 .poster_main .title,
 .catalog_main .title,
 .hero_main .title,
-.cart_main .title {
+.cart_main .titl,
+.error_main .title {
   display: flex;
   font-family: "SF Pro Display Light";
   font-size: 60px;
@@ -1131,4 +1133,45 @@ header .color_button:hover {
 
 .blink-image {
   transition: opacity 1s ease-in-out;
+}
+
+.error_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.error_main .head,
+.error_main .footer {
+  display: flex;
+  align-items: center;
+}
+
+.error_main .margin {
+  margin-left: 20px;
+}
+
+.error_main .subhead,
+.error_main .subhead_footer {
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.error_main .middle_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error_main .footer .title_footer {
+  font-size: 69px;
+}
+
+.error_main .subhead_footer {
+  margin-left: 0px;
+}
+
+.hero_calendar a {
+  text-decoration: none;
+  color: #191919;
 }
