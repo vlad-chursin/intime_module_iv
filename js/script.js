@@ -27,10 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     openBtn.addEventListener("click", openModal);
   }
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeModal);
-  }
-
   modal?.addEventListener("click", (e) => {
     if (e.target === modal) {
       closeModal();
