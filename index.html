@@ -320,7 +320,7 @@
       <div id="form_modal" class="modal">
         <div class="content_block">
           <div class="form_block">
-            <div class="form">
+            <form class="form" id="form">
               <p class="headline">Оставить Заявку</p>
               <div class="inputs">
                 <input type="text" name="name" placeholder="Имя" />
@@ -330,10 +330,10 @@
                   placeholder="Номер Телефона"
                 />
               </div>
-            </div>
-            <div class="button_submit">
-              <button type="submit">Отправить</button>
-            </div>
+              <div class="button_submit">
+                <button type="submit" id="submit_button">Отправить</button>
+              </div>
+            </form>
           </div>
           <div class="image_block">
             <img
@@ -342,6 +342,18 @@
               class="modal_image"
             />
           </div>
+        </div>
+      </div>
+
+      <div class="alert__overlay" id="alert_overlay"></div>
+      <div class="custom__alert" id="custom_alert">
+        <div class="alert_content">
+          <h3 class="alert_title">Спасибо!</h3>
+          <p class="alert_message">
+            Ваша заявка успешно отправлена. Время на Вашем счету пока
+            остановлено!
+          </p>
+          <button class="alert_button" id="alert_close">OK</button>
         </div>
       </div>
     </main>

@@ -8,7 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("form_modal");
   const openBtn = document.getElementById("open_modal");
-  const closeBtn = document.querySelector(".close");
 
   const openModal = () => {
     if (!modal) return;
@@ -117,12 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const fullscreenMenu = document.getElementById("fullscreenMenu");
   const menuLinks = document.querySelectorAll(".menu-link");
 
-  // Объявляем все необходимые переменные
   let animationFrameId;
   let closeTimer;
   let isMenuOpen = false;
 
-  // Функция анимации ссылок
   const animateLinks = () => {
     menuLinks.forEach((link, index) => {
       link.style.opacity = "0";
@@ -136,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // Функция сброса анимации
   const resetLinksAnimation = () => {
     menuLinks.forEach((link) => {
       link.style.opacity = "0";
@@ -144,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // Обработчик клика по кнопке меню
   const toggleMenu = () => {
     isMenuOpen = !isMenuOpen;
     menuToggle.classList.toggle("active", isMenuOpen);
@@ -158,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Обработчик клика по ссылке
   const handleLinkClick = function (e) {
     e.preventDefault();
     const targetUrl = this.getAttribute("href");
@@ -176,15 +170,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   };
 
-  // Назначение обработчиков событий
   menuToggle.addEventListener("click", toggleMenu);
   menuLinks.forEach((link) => {
     link.addEventListener("click", handleLinkClick);
   });
 
-  // Очистка при уходе со страницы
   window.addEventListener("beforeunload", () => {
     if (animationFrameId) cancelAnimationFrame(animationFrameId);
     if (closeTimer) clearTimeout(closeTimer);
   });
+});
+
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("alert_overlay").style.display = "block";
+  document.getElementById("custom_alert").style.display = "block";
+
+  this.reset();
+});
+
+document.getElementById("alert_close").addEventListener("click", function () {
+  const alert = document.getElementById("custom_alert");
+  alert.style.animation = "fadeIn 0.4s ease-out reverse forwards";
+
+  setTimeout(() => {
+    document.getElementById("alert_overlay").style.display = "none";
+    alert.style.display = "none";
+    alert.style.animation = "fadeIn 0.4s ease-out forwards";
+  }, 400);
+});
+
+document.getElementById("alert_overlay").addEventListener("click", function () {
+  document.getElementById("alert_close").click();
 });
